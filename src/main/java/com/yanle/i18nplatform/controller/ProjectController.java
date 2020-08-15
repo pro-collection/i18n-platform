@@ -2,9 +2,16 @@ package com.yanle.i18nplatform.controller;
 
 
 import com.yanle.i18nplatform.common.base.ApiResponse;
+import com.yanle.i18nplatform.entity.Project;
+import com.yanle.i18nplatform.service.IProjectService;
+import lombok.RequiredArgsConstructor;
+import org.apache.ibatis.annotations.ConstructorArgs;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * <p>
@@ -17,9 +24,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/project")
 public class ProjectController {
-    @GetMapping
-    public ApiResponse add() {
-        return ApiResponse.success("返回成功");
+
+    @Autowired
+    private IProjectService projectservice;
+
+    @GetMapping("/list")
+    public ApiResponse getList() {
+        List<Project> projectList = projectservice.list();
+        return ApiResponse.ofSuccess(projectList);
     }
 }
 

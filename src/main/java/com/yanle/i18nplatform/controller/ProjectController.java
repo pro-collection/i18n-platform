@@ -28,12 +28,12 @@ import java.util.List;
 public class ProjectController {
 
     @Autowired
-    private IProjectService projectservice;
+    private IProjectService projectService;
 
     @GetMapping("/list")
     public ApiResponse getList(GetProjectListParams params) {
         System.out.println(params);
-        List<Project> projectList = projectservice.list();
+        List<Project> projectList = projectService.list();
         return ApiResponse.ofSuccess(projectList);
     }
 }

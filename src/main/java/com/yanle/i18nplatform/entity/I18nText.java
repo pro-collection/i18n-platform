@@ -11,13 +11,18 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author yanle
- * @since 2020-08-08
+ * @since 2020-08-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class I18nText implements Serializable {
 
     private static final long serialVersionUID=1L;
+
+    /**
+     * 主键
+     */
+    private Long id;
 
     /**
      * 语言种类

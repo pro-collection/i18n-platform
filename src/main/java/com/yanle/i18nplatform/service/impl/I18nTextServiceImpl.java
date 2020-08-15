@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author yanle
- * @since 2020-08-08
+ * @since 2020-08-15
  */
 @Service
 public class I18nTextServiceImpl extends ServiceImpl<I18nTextMapper, I18nText> implements II18nTextService {

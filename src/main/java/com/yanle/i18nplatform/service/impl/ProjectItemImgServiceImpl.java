@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author yanle
- * @since 2020-08-08
+ * @since 2020-08-15
  */
 @Service
 public class ProjectItemImgServiceImpl extends ServiceImpl<ProjectItemImgMapper, ProjectItemImg> implements IProjectItemImgService {

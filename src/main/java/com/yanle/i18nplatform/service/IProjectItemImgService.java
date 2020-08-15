@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author yanle
- * @since 2020-08-08
+ * @since 2020-08-15
  */
 public interface IProjectItemImgService extends IService<ProjectItemImg> {
 
